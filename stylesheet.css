@@ -291,3 +291,80 @@ footer {
       height: auto;
   }
 }
+
+/* 视频控制样式 */
+.project-video {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* 按钮链接样式 */
+.project-links {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btn-paper {
+  background: #2e7d32;
+  color: white;
+  border: 1px solid #1b5e20;
+}
+
+.btn-page {
+  background: #1565c0;
+  color: white;
+  border: 1px solid #0d47a1;
+}
+
+.btn-code {
+  background: #6a1b9a;
+  color: white;
+  border: 1px solid #4a148c;
+}
+
+/* 悬停效果 */
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .project-links {
+      gap: 8px;
+  }
+  .btn {
+      padding: 6px 16px;
+      font-size: 0.85rem;
+  }
+}
+/* 在原有样式基础上添加 */
+.project-card {
+    overflow: hidden; /* 防止内容溢出 */
+}
+
+.project-video {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 400px; /* 保持与设计一致的最大高度 */
+    object-fit: contain;
+    transform: scale(1); /* 强制保持原始比例 */
+    transition: none !important; /* 禁用所有过渡效果 */
+}
+
