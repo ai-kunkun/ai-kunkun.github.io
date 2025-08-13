@@ -665,7 +665,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </div>
- -->
+ 
 
 
 
@@ -738,7 +738,7 @@ jQuery(document).ready(function() {
     })
 });
 </script>
-  </body> --> -->
+  </body> --> 
 
 <!--
   <script>
@@ -751,6 +751,73 @@ jQuery(document).ready(function() {
   ga('send', 'pageview');
 </script>
 -->
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-col-wrapper footer-row">
+      <!-- 左侧：邮箱 -->
+      <div class="footer-col footer-col-1">
+        <p style="margin:0 0 8px 0;">Personal Email:<br>
+          <a href="mailto:aikunkun34@gmail.com">aikunkun34 [at] gmail [dot] com</a>
+        </p>
+      </div>
 
-<!--<script src="custom-pub.js"></script>-->
+      <!-- 中间：四个图标 -->
+      <div class="footer-col footer-col-2" style="display:flex;gap:28px;align-items:center;justify-content:center;">
+        <a href="https://scholar.google.com/citations?hl=en&user=NOuBBWcAAAAJ" target="_blank" class="icon-button github" aria-label="Google Scholar">
+          <i class="ai ai-google-scholar-square icon-github"></i>
+        </a>
+        <a href="https://github.com/ai-kunkun" target="_blank" class="icon-button github" aria-label="GitHub">
+          <i class="fa fa-github icon-github"></i>
+        </a>
+        <a href="https://ai-kunkun.github.io/" target="_blank" class="icon-button linkedin" aria-label="Homepage">
+          <i class="fa fa-linkedin icon-linkedin"></i>
+        </a>
+        <a href="work/CV.pdf" target="_blank" class="icon-button github" aria-label="CV">
+          <i class="ai ai-cv icon-github"></i>
+        </a>
+      </div>
+
+      <!-- 右侧：🌍 + 数字 -->
+      <div class="footer-col footer-col-3" style="text-align:right;">
+        <div class="visitor-wrap" style="margin-bottom:6px;font-size:14px;">
+          🌍 <span id="visit-count">0</span>
+        </div>
+        <p class="text" style="margin:0;">
+          Last updated: Aug, 2025.<br>
+          The style of this website is borrowed from
+          <a href="https://leoyuan.site/" target="_blank">Zeqing Yuan's</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var u = (location.origin || (location.protocol + '//' + location.host)).replace(/\/$/,'');
+  var api = 'https://api.countapi.xyz/hit/' + encodeURIComponent(u) + '/visits';
+  fetch(api)
+    .then(r => r.json())
+    .then(data => {
+      document.getElementById('visit-count').textContent = data.value;
+    })
+    .catch(() => {
+      document.getElementById('visit-count').textContent = '—';
+    });
+})();
+</script>
+
+<style>
+.footer-row{
+  display:flex; align-items:center; justify-content:space-between;
+  background:#fafafa; padding:18px 20px; border-radius:18px;
+}
+@media (max-width: 800px){
+  .footer-row{flex-direction:column; gap:12px; text-align:center;}
+  .footer-col-3{ text-align:center !important; }
+  .visitor-wrap{ justify-content:center !important; }
+}
+</style>
+
+</body>
 </html>
