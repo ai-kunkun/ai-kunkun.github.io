@@ -704,10 +704,10 @@ pre>code {
 /* 背景：把人物推到更右侧，避免被前景卡片挡住 */
 .shallow-bg,
 .deep-bg {
-    background-image: url("images/images/background/chendul7.jpeg");
+    background-image: url("images/images/background/chendul15.png");
     background-size: cover;           /* 全屏覆盖 */
     background-repeat: no-repeat;
-    background-position: 88% 20%;     /* 水平更靠右，垂直保持你喜欢的 25% */
+    background-position: 88% 17%;     /* 水平更靠右，垂直保持你喜欢的 25% */
     image-rendering: auto;            /* 保持原清晰度 */
 }
 
