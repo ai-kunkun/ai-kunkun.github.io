@@ -139,3 +139,63 @@ span.highlight_font {
 span.unavailable {
   color: #c6d6df;
 }
+
+/* ===== Footer layout: match 图一（左邮箱/中地图/右文字） ===== */
+.site-footer .footer-row{
+  display: flex;
+  align-items: center;         /* 让三列垂直居中，对齐地图高度 */
+  justify-content: space-between;
+  gap: 40px;
+
+  /* 去掉图二那种灰底卡片感 */
+  background: transparent;
+  border-radius: 0;
+
+  padding: 18px 0;
+}
+
+/* 左列：邮箱 */
+.site-footer .footer-col-1{
+  flex: 0 0 auto;
+  min-width: 260px;
+}
+
+/* 中列：地图居中 */
+.site-footer .footer-col-map{
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* 控制地图整体宽度（想更大/更小就改这里） */
+.site-footer .footer-visitor-map{
+  width: 640px;     /* 图一更“宽”的关键 */
+  max-width: 640px;
+}
+
+/* 右列：计数 + 文本右对齐 */
+.site-footer .footer-col-3{
+  flex: 0 0 auto;
+  min-width: 320px;
+  text-align: right;
+}
+
+.site-footer .visitor-wrap{
+  display: block;     /* 不隐藏 🌍 计数 */
+}
+
+/* 移动端：竖排堆叠 */
+@media (max-width: 800px){
+  .site-footer .footer-row{
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .site-footer .footer-col-3{
+    text-align: center;
+  }
+  .site-footer .footer-visitor-map{
+    width: min(640px, 100%);
+    max-width: 100%;
+  }
+}
