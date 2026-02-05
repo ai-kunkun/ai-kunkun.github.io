@@ -754,50 +754,36 @@ jQuery(document).ready(function() {
 <footer class="site-footer">
   <div class="wrapper">
     <div class="footer-col-wrapper footer-row">
-      <!-- 左侧：邮箱 -->
+
+      <!-- 左侧：邮箱（内容不改） -->
       <div class="footer-col footer-col-1">
         <p style="margin:0 0 8px 0;">Personal Email:<br>
           <a href="mailto:aikunkun34@gmail.com">aikunkun34 [at] gmail [dot] com</a>
         </p>
       </div>
 
-      <!-- 中间：四个图标 -->
-      <div class="footer-col footer-col-2" style="display:flex;gap:28px;align-items:center;justify-content:center;">
-        <a href="https://scholar.google.com/citations?hl=en&user=NOuBBWcAAAAJ" target="_blank" class="icon-button github" aria-label="Google Scholar">
-          <i class="ai ai-google-scholar-square icon-github"></i>
-        </a>
-        <a href="https://github.com/ai-kunkun" target="_blank" class="icon-button github" aria-label="GitHub">
-          <i class="fa fa-github icon-github"></i>
-        </a>
-        <a href="https://ai-kunkun.github.io/" target="_blank" class="icon-button linkedin" aria-label="Homepage">
-          <i class="fa fa-linkedin icon-linkedin"></i>
-        </a>
-        <a href="work/CV.pdf" target="_blank" class="icon-button github" aria-label="CV">
-          <i class="ai ai-cv icon-github"></i>
-        </a>
+      <!-- 中间：MapMyVisitors（从右侧挪到中间） -->
+      <div class="footer-col footer-col-map">
+        <div class="footer-visitor-map">
+          <script
+            type="text/javascript"
+            id="mapmyvisitors"
+            src="//mapmyvisitors.com/map.js?d=pzNRoLGEsQkXWlrzGqQZB86PdFJId9nEEFj6rRmHh2g&cl=ffffff&w=a">
+          </script>
+        </div>
       </div>
 
-<!-- 右侧：🌍 + 数字 + Map -->
-<div class="footer-col footer-col-3" style="text-align:right;">
-  <div class="visitor-wrap" style="margin-bottom:6px;font-size:14px;">
-    🌍 <span id="visit-count">0</span>
-  </div>
-
-  <!-- MapMyVisitors widget (footer) -->
-  <div class="footer-visitor-map" style="margin:10px 0 8px 0; max-width:260px; margin-left:auto;">
-    <script
-      type="text/javascript"
-      id="mapmyvisitors"
-      src="//mapmyvisitors.com/map.js?d=pzNRoLGEsQkXWlrzGqQZB86PdFJId9nEEFj6rRmHh2g&cl=ffffff&w=a">
-    </script>
-  </div>
-
-  <p class="text" style="margin:0;">
-    Last updated: Aug, 2025.<br>
-    The style of this website is borrowed from
-    <a href="https://leoyuan.site/" target="_blank">Zeqing Yuan's</a>.
-  </p>
-</div>
+      <!-- 右侧：保持原文字（内容不改），把 🌍 计数隐藏在 CSS 里 -->
+      <div class="footer-col footer-col-3" style="text-align:right;">
+        <div class="visitor-wrap" style="margin-bottom:6px;font-size:14px;">
+          🌍 <span id="visit-count">0</span>
+        </div>
+        <p class="text" style="margin:0;">
+          Last updated: Aug, 2025.<br>
+          The style of this website is borrowed from
+          <a href="https://leoyuan.site/" target="_blank">Zeqing Yuan's</a>.
+        </p>
+      </div>
 
     </div>
   </div>
