@@ -2086,3 +2086,10 @@ div.paginate-container li:nth-last-child(2) a:after {
     height: 16px;
     margin-right: 4px;
   }
+
+/* 让中间列内容居中显示 */
+.footer-col-map { text-align: center; }
+
+/* 让地图块按自身宽度正常展开 */
+.footer-col-map .footer-visitor-map { display: inline-block; }
+
