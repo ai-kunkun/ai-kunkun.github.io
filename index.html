@@ -777,17 +777,28 @@ jQuery(document).ready(function() {
         </a>
       </div>
 
-      <!-- 右侧：🌍 + 数字 -->
-      <div class="footer-col footer-col-3" style="text-align:right;">
-        <div class="visitor-wrap" style="margin-bottom:6px;font-size:14px;">
-          🌍 <span id="visit-count">0</span>
-        </div>
-        <p class="text" style="margin:0;">
-          Last updated: Aug, 2025.<br>
-          The style of this website is borrowed from
-          <a href="https://leoyuan.site/" target="_blank">Zeqing Yuan's</a>.
-        </p>
-      </div>
+<!-- 右侧：🌍 + 数字 + Map -->
+<div class="footer-col footer-col-3" style="text-align:right;">
+  <div class="visitor-wrap" style="margin-bottom:6px;font-size:14px;">
+    🌍 <span id="visit-count">0</span>
+  </div>
+
+  <!-- MapMyVisitors widget (footer) -->
+  <div class="footer-visitor-map" style="margin:10px 0 8px 0; max-width:260px; margin-left:auto;">
+    <script
+      type="text/javascript"
+      id="mapmyvisitors"
+      src="//mapmyvisitors.com/map.js?d=pzNRoLGEsQkXWlrzGqQZB86PdFJId9nEEFj6rRmHh2g&cl=ffffff&w=a">
+    </script>
+  </div>
+
+  <p class="text" style="margin:0;">
+    Last updated: Aug, 2025.<br>
+    The style of this website is borrowed from
+    <a href="https://leoyuan.site/" target="_blank">Zeqing Yuan's</a>.
+  </p>
+</div>
+
     </div>
   </div>
 </footer>
